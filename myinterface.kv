@@ -1,0 +1,253 @@
+#:kivy 2.0.0
+#: import hex kivy.utils.get_color_from_hex
+<MenuScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: hex("#49677B")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            font_size: 35
+            text: "Welcome"
+            pos_hint: {"x": 0, "y": 0.4}
+        Button:
+            id: exit_button
+            text: "Exit"
+            size_hint: 0.1, 0.1
+            on_press: app.stop()
+        Button:
+            id: intensityMenu_button
+            text: "Intensity Menu"
+            on_press: 
+                root.manager.transition.direction = "left"
+                root.manager.current = "intensitymenu"
+            pos_hint: {"x": 0.42, "y": 0.3}
+            size_hint: 0.15, 0.1
+        Button:
+            id: cycleMenu_button
+            text: "Pitch Roll Menu"
+            on_press: 
+                root.manager.transition.direction = "left"
+                root.manager.current = "pitchrollmenu"
+            pos_hint: {"x": 0.42, "y": 0.45}
+            size_hint: 0.15, 0.1
+        Button:
+            id: startMenu_button
+            text: "Start Menu"
+            on_press: 
+                root.manager.transition.direction = "left"
+                root.manager.current = "startmenu"
+            pos_hint: {"x": 0.42, "y": 0.6}
+            size_hint: 0.15, 0.1
+
+<IntensityScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: hex("#49677B")
+            Rectangle:
+                pos: self.pos                    
+                size: self.size
+        Label:
+            font_size: 35
+            pos_hint: {"x": 0,"y": 0.43}
+            text: "Intensity Menu"
+        Label:
+            font_size: 35
+            pos_hint: {"x": -0.3,"y": 0.25}
+            text: "Intensity"
+        Label:
+            font_size: 35
+            pos_hint: {"x": -0.3,"y": 0.15}
+            text: str(root.intensity)
+        Label:
+            font_size: 25
+            pos_hint: {"x": 0, "y": -0.4}
+            halign: "center"
+            text: root.warningMessage
+        Label:
+            font_size: 35
+            pos_hint: {"x": 0.3, "y": 0.25}
+            text: "Force Applied (N)"
+        Label:
+            font_size: 35
+            pos_hint: {"x": 0.3, "y": 0.15}
+            text: str(root.forceApplied)
+        Label:
+            font_size: 25
+            pos_hint: {"x": 0.3, "y": 0}
+            halign: "center"
+            text: root.forceMessage
+        Button:
+            id: return_button
+            text: "Return"
+            on_press: 
+                root.manager.transition.direction = "right"
+                root.manager.current = "mainmenu"
+            pos_hint: {"x": 0.85, "bottom": 0}
+            size_hint: 0.15, 0.1
+        Button:
+            id: intensityUp_button
+            text: "+"
+            pos_hint: {"x": 0.15 ,"y": 0.37}
+            size_hint: 0.1, 0.1
+            on_press: root.intensityMod("+")
+            on_press: root.calcForce("+")
+        Button:
+            id: intensityDown_button
+            text: "-"
+            pos_hint: {"x": 0.15 ,"y": 0.25}
+            size_hint: 0.1, 0.1
+            on_press: root.intensityMod("-")
+            on_press: root.calcForce("-")
+        Button:
+            text: "Submit"
+            pos_hint: {"x": 0.45, "y": 0.25}
+            size_hint: 0.1, 0.1
+            on_press: root.intensitySubmit()
+
+<PitchRollScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: hex("#49677B")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            font_size: 35
+            pos_hint: {"x": 0,"y": 0.43}
+            text: "Pitch and Roll Menu"
+        Label:
+            font_size: 25
+            pos_hint: {"x": 0, "y": -0.4}
+            halign: "center"
+            text: root.infoMessage
+        Label:
+            font_size: 50
+            pos_hint: {"x": -0.3, "y": 0.2}
+            text: "Pitch"
+        Label:
+            font_size: 60
+            pos_hint: {"x": -0.3,"y": 0.1}
+            text: str(root.myPitch)
+        Label:
+            font_size: 50
+            pos_hint: {"x": 0.3, "y": 0.2}
+            text: "Roll"
+        Label:
+            font_size: 60
+            pos_hint: {"x": 0.3,"y": 0.1}
+            text: str(root.myRoll)
+        Button:
+            text: "Retrieve P/R"
+            on_press: root.retrievePR()
+            pos_hint: {"x": 0.43, "y": 0.2}
+            size_hint: 0.15, 0.1
+        Button:
+            id: return_button
+            text: "Return"
+            on_press: 
+                root.manager.transition.direction = "right"
+                root.manager.current = "mainmenu"
+            pos_hint: {"x": 0.85, "bottom": 0}
+            size_hint: 0.15, 0.1
+
+<StartScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: hex("#49677B")
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            font_size: 35
+            pos_hint: {"x": -0.3, "y": 0.25}
+            text: "Pressure Length (Seconds)"
+        Label:
+            font_size: 35
+            pos_hint: {"x": -0.3,"y": 0.15}
+            text: str(root.pressureTime)
+        Label:
+            font_size: 35
+            pos_hint: {"x": 0,"y": 0.43}
+            text: "Initiate Menu"
+        Label:
+            text: str(round(root.timeCount))
+            font_size: 35
+            pos_hint: {"x": 0.26, "y": 0.15}
+        Label:
+            text: "Timer (Count Up)"
+            font_size: 35
+            pos_hint: {"x": 0.26,"y": 0.25}
+        Label:
+            text: "Intensity Level"
+            font_size: 35
+            pos_hint: {"x": 0.17, "y": -0.3}
+        Label:
+            id: intensityShow
+            font_size: 35
+            pos_hint: {"x": 0.35, "y": -0.3}
+        Label:
+            text: "Force Applied"
+            font_size: 35
+            pos_hint: {"x": 0.17, "y": -0.2}
+        Label:
+            id: forceShow
+            font_size: 35
+            pos_hint: {"x": 0.35, "y": -0.2}
+        Button:
+            id: return_button
+            text: "Return"
+            on_press: 
+                root.manager.transition.direction = "right"
+                root.manager.current = "mainmenu"
+            pos_hint: {"x": 0.85, "bottom": 0}
+            size_hint: 0.15, 0.1
+        Button:
+            text: "+"
+            pos_hint: {"x": 0.07 ,"y": 0.37}
+            size_hint: 0.1, 0.1
+            on_press: root.pTimeMod("+1")
+        Button:
+            text: "-"
+            pos_hint: {"x": 0.07 ,"y": 0.25}
+            size_hint: 0.1, 0.1
+            on_press: root.pTimeMod("-1")
+        Button:
+            text: "+10"
+            pos_hint: {"x": 0.22 ,"y": 0.37}
+            size_hint: 0.1, 0.1
+            on_press: root.pTimeMod("+10")
+        Button:
+            text: "-10"
+            pos_hint: {"x": 0.22 ,"y": 0.25}
+            size_hint: 0.1, 0.1
+            on_press: root.pTimeMod("-10")
+        Button:
+            text: "Submit Length"
+            pos_hint: {"x": 0.14, "y": 0.08}
+            size_hint: 0.1, 0.1
+            on_press: root.cycleSubmit()
+        Button:
+            text: "Begin"
+            pos_hint: {"x": 0.85,"y": 0.37}
+            on_press: 
+                root.beginProc()
+                root.start()
+            size_hint: 0.1, 0.1
+        Button:
+            text: "Stop"
+            pos_hint: {"x": 0.72, "y": 0.37}
+            size_hint: 0.1, 0.1
+            on_press: root.stop()
+        Button:
+            text: "Reset"
+            pos_hint: {"x": 0.59,"y": 0.37}
+            size_hint: 0.1, 0.1
+            on_press: 
+                root.timeCount = 0
+                root.stop()
