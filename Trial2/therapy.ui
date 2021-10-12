@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Therapy</class>
+ <widget class="QDialog" name="Therapy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>410</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOLD TIME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="dropdown_pulses">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>450</y>
+     <width>73</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>320</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>450</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="img_logo">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>30</y>
+     <width>281</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>160</y>
+     <width>361</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;ARM 2 CONTROL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#000000;&quot;&gt;ARM 1 CONTROL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>410</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;PULSES PER CYCLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>320</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_help">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>93</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>440</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>600</y>
+     <width>71</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>180</y>
+     <width>20</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;PRESSURE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_start_therapy">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>550</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #1c6d88;
+color: white;
+
+</string>
+   </property>
+   <property name="text">
+    <string>BEGIN THERAPY</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>400</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;HOLD TIME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="img_dots">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>610</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../trial1/images/imgDots.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_stop">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>550</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ff1616;
+color: white;
+
+</string>
+   </property>
+   <property name="text">
+    <string>STOP</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>280</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;CYCLE TIME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>180</y>
+     <width>20</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>160</y>
+     <width>361</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;CYCLE CONTROL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>280</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;PRESSURE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="dropdown_cycle_time">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>320</y>
+     <width>73</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>25</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#1c6d88;&quot;&gt;THERAPY MODE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

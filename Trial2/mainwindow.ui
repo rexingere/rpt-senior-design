@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>28</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">body {background-color: coral;}</string>
+   </property>
+   <widget class="QLabel" name="img_logo">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>30</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>421</width>
+      <height>113</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+  width: 100%;
+  height: auto;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../trial1/images/imgLeadingEdge.png</pixmap>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="indent">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>1121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>48</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Therbo Robotic Therapy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img_dots">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>570</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../trial1/images/imgDots.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>500</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: white;
+
+</string>
+    </property>
+    <property name="text">
+     <string>Manual Mode</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_help">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>93</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1105</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
