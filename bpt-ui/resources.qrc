@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>question.png</file>
+        <file>leadingEdgeLogo.png</file>
+        <file>backBtn.png</file>
+    </qresource>
+</RCC>
