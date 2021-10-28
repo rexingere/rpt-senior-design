@@ -20,6 +20,8 @@ TherapyMode::TherapyMode(QWidget *parent) :
     ui->btn_back->setIcon(QIcon(":/img/backBtn.png"));
     ui->btn_back->setIconSize(QSize(55,55));
 
+    this->set_combo_values();
+
 }
 
 TherapyMode::~TherapyMode()
@@ -48,4 +50,21 @@ void TherapyMode::on_btn_therapy_clicked()
 void TherapyMode::on_btn_back_clicked()
 {
     hide();
+}
+
+void TherapyMode::set_combo_values()
+{
+    ui->pulses_combo->addItem(" ");
+    for(int i = 0; i < 5; i++)
+    {
+        ui->pulses_combo->addItem(QString::number(i + 1));
+    }
+
+    ui->cycles_combo->addItem(" ");
+    for(int i = 0; i < 5; i++)
+    {
+        ui->cycles_combo->addItem(QString::number(i + 1));
+    }
+
+
 }

@@ -22,7 +22,7 @@ static const uint qt_meta_data_TherapyMode[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,7 @@ static const uint qt_meta_data_TherapyMode[] = {
       35,   34,   34,   34, 0x08,
       57,   34,   34,   34, 0x08,
       82,   34,   34,   34, 0x08,
+     104,   34,   34,   34, 0x08,
 
        0        // eod
 };
@@ -41,7 +42,7 @@ static const uint qt_meta_data_TherapyMode[] = {
 static const char qt_meta_stringdata_TherapyMode[] = {
     "TherapyMode\0on_btn_help_clicked()\0\0"
     "on_btn_stop_clicked()\0on_btn_therapy_clicked()\0"
-    "on_btn_back_clicked()\0"
+    "on_btn_back_clicked()\0set_combo_values()\0"
 };
 
 void TherapyMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -54,6 +55,7 @@ void TherapyMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 1: _t->on_btn_stop_clicked(); break;
         case 2: _t->on_btn_therapy_clicked(); break;
         case 3: _t->on_btn_back_clicked(); break;
+        case 4: _t->set_combo_values(); break;
         default: ;
         }
     }
@@ -92,9 +94,9 @@ int TherapyMode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

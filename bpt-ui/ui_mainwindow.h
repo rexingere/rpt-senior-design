@@ -40,13 +40,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1024, 800);
+        MainWindow->resize(1024, 668);
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(1001, 800));
+        MainWindow->setMinimumSize(QSize(1001, 650));
         MainWindow->setMaximumSize(QSize(16777215, 1000));
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "gridline-color: rgb(255, 255, 255);"));

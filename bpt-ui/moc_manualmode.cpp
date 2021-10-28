@@ -22,7 +22,7 @@ static const uint qt_meta_data_ManualMode[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,7 @@ static const uint qt_meta_data_ManualMode[] = {
       64,   41,   41,   41, 0x08,
       87,   41,   41,   41, 0x08,
      109,   41,   41,   41, 0x08,
+     131,   41,   41,   41, 0x08,
 
        0        // eod
 };
@@ -43,6 +44,7 @@ static const char qt_meta_stringdata_ManualMode[] = {
     "ManualMode\0on_btn_therapy_mode_clicked()\0"
     "\0on_btn_help_clicked()\0on_btn_reset_clicked()\0"
     "on_btn_test_clicked()\0on_btn_back_clicked()\0"
+    "set_combo_values()\0"
 };
 
 void ManualMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -56,6 +58,7 @@ void ManualMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->on_btn_reset_clicked(); break;
         case 3: _t->on_btn_test_clicked(); break;
         case 4: _t->on_btn_back_clicked(); break;
+        case 5: _t->set_combo_values(); break;
         default: ;
         }
     }
@@ -94,9 +97,9 @@ int ManualMode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

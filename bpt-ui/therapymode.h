@@ -24,6 +24,9 @@ private slots:
 
     void on_btn_back_clicked();
 
+    void set_combo_values();
+
+
 private:
     Ui::TherapyMode *ui;
 };
