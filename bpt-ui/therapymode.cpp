@@ -65,6 +65,14 @@ void TherapyMode::set_combo_values()
     {
         ui->cycles_combo->addItem(QString::number(i + 1));
     }
+}
 
+void TherapyMode::set_params(
+        QString pressure1, QString pressure2, QString hold1, QString hold2)
+{
+    ui->pressure1->setText(pressure1);
+    ui->pressure2->setText(pressure2);
+    ui->hold1->setText(hold1);
+    ui->hold2->setText(hold2);
 
 }

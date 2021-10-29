@@ -14,6 +14,7 @@ class TherapyMode : public QDialog
 public:
     explicit TherapyMode(QWidget *parent = nullptr);
     ~TherapyMode();
+    void set_params(QString pressure1, QString pressure2, QString hold1, QString hold2);
 
 private slots:
     void on_btn_help_clicked();

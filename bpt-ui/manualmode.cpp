@@ -37,6 +37,11 @@ ManualMode::~ManualMode()
 void ManualMode::on_btn_therapy_mode_clicked()
 {
     therapymode = new TherapyMode(this);
+    therapymode->set_params(
+                ui->pressure1_combo->currentText(),
+                ui->pressure2_combo->currentText(),
+                ui->hold1_combo->currentText(),
+                ui->hold2_combo->currentText());
     therapymode->show();
 }
 

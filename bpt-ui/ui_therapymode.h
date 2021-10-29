@@ -33,13 +33,9 @@ public:
     QLabel *label_5;
     QLabel *label_3;
     QLabel *label_4;
-    QComboBox *pressure1_combo;
-    QComboBox *hold1_combo;
-    QComboBox *hold2_combo;
     QLabel *label_8;
     QLabel *label_7;
     QFrame *line;
-    QComboBox *pressure2_combo;
     QLabel *label_6;
     QFrame *line_2;
     QComboBox *cycles_combo;
@@ -47,6 +43,10 @@ public:
     QComboBox *pulses_combo;
     QLabel *label_10;
     QLabel *label_11;
+    QLabel *pressure1;
+    QLabel *hold1;
+    QLabel *pressure2;
+    QLabel *hold2;
 
     void setupUi(QDialog *TherapyMode)
     {
@@ -118,15 +118,6 @@ public:
         label_4->setGeometry(QRect(40, 160, 181, 31));
         label_4->setFont(font1);
         label_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        pressure1_combo = new QComboBox(TherapyMode);
-        pressure1_combo->setObjectName(QString::fromUtf8("pressure1_combo"));
-        pressure1_combo->setGeometry(QRect(40, 260, 121, 51));
-        hold1_combo = new QComboBox(TherapyMode);
-        hold1_combo->setObjectName(QString::fromUtf8("hold1_combo"));
-        hold1_combo->setGeometry(QRect(40, 370, 121, 51));
-        hold2_combo = new QComboBox(TherapyMode);
-        hold2_combo->setObjectName(QString::fromUtf8("hold2_combo"));
-        hold2_combo->setGeometry(QRect(410, 370, 121, 51));
         label_8 = new QLabel(TherapyMode);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(410, 330, 131, 31));
@@ -142,9 +133,6 @@ public:
         line->setGeometry(QRect(310, 160, 16, 231));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
-        pressure2_combo = new QComboBox(TherapyMode);
-        pressure2_combo->setObjectName(QString::fromUtf8("pressure2_combo"));
-        pressure2_combo->setGeometry(QRect(410, 260, 121, 51));
         label_6 = new QLabel(TherapyMode);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(410, 220, 111, 31));
@@ -176,6 +164,31 @@ public:
         label_11->setGeometry(QRect(710, 160, 401, 31));
         label_11->setFont(font1);
         label_11->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        pressure1 = new QLabel(TherapyMode);
+        pressure1->setObjectName(QString::fromUtf8("pressure1"));
+        pressure1->setGeometry(QRect(40, 260, 101, 51));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("DejaVu Sans"));
+        font2.setPointSize(20);
+        font2.setBold(false);
+        font2.setWeight(50);
+        pressure1->setFont(font2);
+        pressure1->setStyleSheet(QString::fromUtf8("border:1px solid black;"));
+        hold1 = new QLabel(TherapyMode);
+        hold1->setObjectName(QString::fromUtf8("hold1"));
+        hold1->setGeometry(QRect(40, 370, 101, 51));
+        hold1->setFont(font2);
+        hold1->setStyleSheet(QString::fromUtf8("border:1px solid black;"));
+        pressure2 = new QLabel(TherapyMode);
+        pressure2->setObjectName(QString::fromUtf8("pressure2"));
+        pressure2->setGeometry(QRect(410, 260, 101, 51));
+        pressure2->setFont(font2);
+        pressure2->setStyleSheet(QString::fromUtf8("border:1px solid black;"));
+        hold2 = new QLabel(TherapyMode);
+        hold2->setObjectName(QString::fromUtf8("hold2"));
+        hold2->setGeometry(QRect(410, 370, 101, 51));
+        hold2->setFont(font2);
+        hold2->setStyleSheet(QString::fromUtf8("border:1px solid black;"));
 
         retranslateUi(TherapyMode);
 
@@ -199,6 +212,10 @@ public:
         label_9->setText(QApplication::translate("TherapyMode", "<html><head/><body><p><span style=\" color:#000000;\">Number of Cycles</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("TherapyMode", "<html><head/><body><p><span style=\" color:#000000;\">Pulses per Cycle</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("TherapyMode", "<html><head/><body><p><span style=\" font-size:16pt; color:#000000;\">Cycle Control</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        pressure1->setText(QApplication::translate("TherapyMode", "TextLabel", 0, QApplication::UnicodeUTF8));
+        hold1->setText(QApplication::translate("TherapyMode", "TextLabel", 0, QApplication::UnicodeUTF8));
+        pressure2->setText(QApplication::translate("TherapyMode", "TextLabel", 0, QApplication::UnicodeUTF8));
+        hold2->setText(QApplication::translate("TherapyMode", "TextLabel", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

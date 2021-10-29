@@ -51,7 +51,7 @@ public:
         ManualMode->setMinimumSize(QSize(1024, 600));
         label = new QLabel(ManualMode);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(100, -10, 401, 91));
+        label->setGeometry(QRect(110, 0, 401, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("DejaVu Sans"));
         font.setPointSize(14);
