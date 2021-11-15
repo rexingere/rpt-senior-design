@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="img">
+        <file>HlpIcn.png</file>
+        <file>InfoIcn.png</file>
+    </qresource>
+</RCC>

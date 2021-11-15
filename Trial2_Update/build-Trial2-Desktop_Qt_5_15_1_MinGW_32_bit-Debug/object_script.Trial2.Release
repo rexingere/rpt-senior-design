@@ -1,0 +1,10 @@
+release/dialog.o
+release/help.o
+release/main.o
+release/mainwindow.o
+release/therapy.o
+release/qrc_resources.o
+release/moc_dialog.o
+release/moc_help.o
+release/moc_mainwindow.o
+release/moc_therapy.o

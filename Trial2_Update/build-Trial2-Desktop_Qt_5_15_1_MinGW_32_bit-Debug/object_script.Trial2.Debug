@@ -1,0 +1,10 @@
+debug/dialog.o
+debug/help.o
+debug/main.o
+debug/mainwindow.o
+debug/therapy.o
+debug/qrc_resources.o
+debug/moc_dialog.o
+debug/moc_help.o
+debug/moc_mainwindow.o
+debug/moc_therapy.o
