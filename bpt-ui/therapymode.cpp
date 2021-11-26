@@ -2,6 +2,11 @@
 #include "ui_therapymode.h"
 #include <QMessageBox>
 
+int stop_value = 0; //pin 3
+int arm1_value = 0; // pin 16
+int arm2_value = 0; // pin 12
+
+
 TherapyMode::TherapyMode(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TherapyMode)
@@ -10,7 +15,7 @@ TherapyMode::TherapyMode(QWidget *parent) :
 
     this->setStyleSheet("background-color:white");
     this->setAutoFillBackground(true);
-    this->showFullScreen();
+    //this->showFullScreen();
 
     ui->btn_help->setFlat(true);
     ui->btn_help->setIcon(QIcon(":/img/question.png"));
@@ -32,19 +37,33 @@ TherapyMode::~TherapyMode()
 void TherapyMode::on_btn_help_clicked()
 {
     QMessageBox::information(this, "Help", "Instructions");
+    helppage = new HelpPage(this);
+    helppage->show();
 
 }
 
 void TherapyMode::on_btn_stop_clicked()
 {
-    QMessageBox::information(this, "Operation", "Stop");
+    //QMessageBox::information(this, "Operation", "Stop");
+
+        FILE *sysfs_handle = NULL;
+
+        if((sysfs_handle =fopen("/sys/class/gpio/gpio3/value", "w" )) != NULL) {
+            stop_value = stop_value ? 0 : 1;
+            char str_value[2];
+            snprintf(str_value, (2*sizeof(char)), "%d", stop_value);
+
+            fwrite(str_value, sizeof(char), 2, sysfs_handle);
+            fclose(sysfs_handle);
+        }
 
 }
 
 void TherapyMode::on_btn_therapy_clicked()
 {
-    QMessageBox::information(this, "Operation", "Begin Therapy");
-
+    QString cmd_qt = QString("python -c 'import ledSynthesis; ledSynthesis.controller(1," + ui->pressure2->text() + "," + ui->hold2->text() + "," + ui->pulses_combo->currentText() + ")'");
+    const char* cmd = cmd_qt.toLocal8Bit().constData();
+    system(cmd);
 }
 
 void TherapyMode::on_btn_back_clicked()

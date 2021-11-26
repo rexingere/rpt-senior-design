@@ -3,5 +3,13 @@
         <file>question.png</file>
         <file>leadingEdgeLogo.png</file>
         <file>backBtn.png</file>
+        <file>numpad.png</file>
+        <file>exit_btn.png</file>
+        <file>manual_mode.png</file>
+        <file>test.png</file>
+        <file>reset.png</file>
+        <file>stop.png</file>
+        <file>begin_therapy.png</file>
+        <file>therapy_mode.png</file>
     </qresource>
 </RCC>

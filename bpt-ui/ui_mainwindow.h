@@ -32,6 +32,7 @@ public:
     QLabel *img_logo;
     QLabel *lbl_title;
     QPushButton *btn_help;
+    QPushButton *pushButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -56,7 +57,7 @@ public:
         centralWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         btn_manual_mode = new QPushButton(centralWidget);
         btn_manual_mode->setObjectName(QString::fromUtf8("btn_manual_mode"));
-        btn_manual_mode->setGeometry(QRect(70, 440, 311, 81));
+        btn_manual_mode->setGeometry(QRect(70, 390, 311, 81));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -92,7 +93,7 @@ public:
         img_logo->setIndent(0);
         lbl_title = new QLabel(centralWidget);
         lbl_title->setObjectName(QString::fromUtf8("lbl_title"));
-        lbl_title->setGeometry(QRect(60, 240, 741, 191));
+        lbl_title->setGeometry(QRect(60, 190, 741, 191));
         QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Minimum);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
@@ -108,6 +109,10 @@ public:
         btn_help->setObjectName(QString::fromUtf8("btn_help"));
         btn_help->setGeometry(QRect(20, 20, 60, 60));
         btn_help->setStyleSheet(QString::fromUtf8("border:none;"));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(20, 515, 60, 60));
+        pushButton->setStyleSheet(QString::fromUtf8("border:none;"));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -132,6 +137,7 @@ public:
         img_logo->setText(QString());
         lbl_title->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:72pt;\">Bionic PT</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         btn_help->setText(QString());
+        pushButton->setText(QString());
     } // retranslateUi
 
 };

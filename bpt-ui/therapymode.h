@@ -3,6 +3,9 @@
 
 #include <QDialog>
 
+#include "helppage.h"
+
+
 namespace Ui {
 class TherapyMode;
 }
@@ -30,6 +33,8 @@ private slots:
 
 private:
     Ui::TherapyMode *ui;
+    HelpPage *helppage;
+
 };
 
 #endif // THERAPYMODE_H

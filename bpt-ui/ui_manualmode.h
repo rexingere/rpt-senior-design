@@ -42,6 +42,8 @@ public:
     QComboBox *hold1_combo;
     QComboBox *pressure2_combo;
     QComboBox *hold2_combo;
+    QPushButton *numpad_1;
+    QPushButton *numpad_2;
 
     void setupUi(QDialog *ManualMode)
     {
@@ -157,6 +159,14 @@ public:
         hold2_combo = new QComboBox(ManualMode);
         hold2_combo->setObjectName(QString::fromUtf8("hold2_combo"));
         hold2_combo->setGeometry(QRect(580, 310, 121, 51));
+        numpad_1 = new QPushButton(ManualMode);
+        numpad_1->setObjectName(QString::fromUtf8("numpad_1"));
+        numpad_1->setGeometry(QRect(340, 200, 61, 51));
+        numpad_1->setStyleSheet(QString::fromUtf8("border:none;"));
+        numpad_2 = new QPushButton(ManualMode);
+        numpad_2->setObjectName(QString::fromUtf8("numpad_2"));
+        numpad_2->setGeometry(QRect(710, 200, 61, 51));
+        numpad_2->setStyleSheet(QString::fromUtf8("border:none;"));
         label->raise();
         btn_therapy_mode->raise();
         btn_test->raise();
@@ -174,6 +184,8 @@ public:
         pressure2_combo->raise();
         hold2_combo->raise();
         label_3->raise();
+        numpad_1->raise();
+        numpad_2->raise();
 
         retranslateUi(ManualMode);
 
@@ -195,6 +207,8 @@ public:
         label_6->setText(QApplication::translate("ManualMode", "<html><head/><body><p><span style=\" color:#000000;\">Pressure</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("ManualMode", "<html><head/><body><p><span style=\" color:#000000;\">Hold Time</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ManualMode", "<html><head/><body><p><span style=\" color:#000000;\">Hold Time</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        numpad_1->setText(QString());
+        numpad_2->setText(QString());
     } // retranslateUi
 
 };

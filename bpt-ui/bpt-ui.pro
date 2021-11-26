@@ -28,17 +28,26 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     manualmode.cpp \
-    therapymode.cpp
+    therapymode.cpp \
+    numpad.cpp \
+    helppage.cpp \
+    troubleshoot.cpp
 
 HEADERS += \
         mainwindow.h \
     manualmode.h \
-    therapymode.h
+    therapymode.h \
+    numpad.h \
+    helppage.h \
+    troubleshoot.h
 
 FORMS += \
         mainwindow.ui \
     manualmode.ui \
-    therapymode.ui
+    therapymode.ui \
+    numpad.ui \
+    helppage.ui \
+    troubleshoot.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -2,8 +2,10 @@
 #define MANUALMODE_H
 
 #include <QDialog>
-#include "therapymode.h"
 
+#include "therapymode.h"
+#include "numpad.h"
+#include "helppage.h"
 namespace Ui {
 class ManualMode;
 }
@@ -15,6 +17,9 @@ class ManualMode : public QDialog
 public:
     explicit ManualMode(QWidget *parent = nullptr);
     ~ManualMode();
+
+    void on_numpad_clicked();
+
 
 private slots:
     void on_btn_therapy_mode_clicked();
@@ -29,10 +34,25 @@ private slots:
 
     void set_combo_values();
 
+    void on_numpad_1_clicked();
+
+    void on_numpad_2_clicked();
+
+public slots:
+    void set_pressure_numpad(QString msg);
+
+    void receiveMessage(const QString &msg);
+
+
+
 
 private:
     Ui::ManualMode *ui;
     TherapyMode *therapymode;
+    Numpad *numpad;
+    HelpPage *helppage;
+
+
 
 };
 

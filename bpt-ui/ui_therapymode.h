@@ -71,7 +71,7 @@ public:
         btn_stop->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: white;\n"
 "border-radius: 10px;\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(202, 0, 42), stop:1 rgb(255, 17, 0));\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(255, 0, 40), stop:1 rgb(255, 17, 0));\n"
 "\n"
 ""));
         btn_therapy = new QPushButton(TherapyMode);

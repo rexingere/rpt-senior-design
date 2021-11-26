@@ -49,7 +49,7 @@ gridline-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>440</y>
+      <y>390</y>
       <width>311</width>
       <height>81</height>
      </rect>
@@ -124,7 +124,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>240</y>
+      <y>190</y>
       <width>741</width>
       <height>191</height>
      </rect>
@@ -152,6 +152,22 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
      <rect>
       <x>20</x>
       <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>515</y>
       <width>60</width>
       <height>60</height>
      </rect>

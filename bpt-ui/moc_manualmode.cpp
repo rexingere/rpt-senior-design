@@ -22,7 +22,7 @@ static const uint qt_meta_data_ManualMode[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -36,6 +36,10 @@ static const uint qt_meta_data_ManualMode[] = {
       87,   41,   41,   41, 0x08,
      109,   41,   41,   41, 0x08,
      131,   41,   41,   41, 0x08,
+     150,   41,   41,   41, 0x08,
+     172,   41,   41,   41, 0x08,
+     194,  223,   41,   41, 0x0a,
+     227,  223,   41,   41, 0x0a,
 
        0        // eod
 };
@@ -44,7 +48,10 @@ static const char qt_meta_stringdata_ManualMode[] = {
     "ManualMode\0on_btn_therapy_mode_clicked()\0"
     "\0on_btn_help_clicked()\0on_btn_reset_clicked()\0"
     "on_btn_test_clicked()\0on_btn_back_clicked()\0"
-    "set_combo_values()\0"
+    "set_combo_values()\0on_numpad_1_clicked()\0"
+    "on_numpad_2_clicked()\0"
+    "set_pressure_numpad(QString)\0msg\0"
+    "receiveMessage(QString)\0"
 };
 
 void ManualMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -59,10 +66,13 @@ void ManualMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->on_btn_test_clicked(); break;
         case 4: _t->on_btn_back_clicked(); break;
         case 5: _t->set_combo_values(); break;
+        case 6: _t->on_numpad_1_clicked(); break;
+        case 7: _t->on_numpad_2_clicked(); break;
+        case 8: _t->set_pressure_numpad((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 9: _t->receiveMessage((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData ManualMode::staticMetaObjectExtraData = {
@@ -97,9 +107,9 @@ int ManualMode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 10;
     }
     return _id;
 }
