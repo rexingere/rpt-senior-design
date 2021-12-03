@@ -18,7 +18,7 @@ ManualMode::ManualMode(QWidget *parent) :
 
 
     ui->btn_help->setFlat(true);
-    ui->btn_help->setIcon(QIcon(":/img/question.png"));
+    ui->btn_help->setIcon(QIcon(":/img/imgQuestion.png"));
     ui->btn_help->setIconSize(QSize(55,55));
 
     ui->numpad_1->setIcon(QIcon(":/img/numpad.png"));
@@ -26,6 +26,12 @@ ManualMode::ManualMode(QWidget *parent) :
 
     ui->numpad_2->setIcon(QIcon(":/img/numpad.png"));
     ui->numpad_2->setIconSize(QSize(40,40));
+
+    ui->numpad_3->setIcon(QIcon(":/img/numpad.png"));
+    ui->numpad_3->setIconSize(QSize(40,40));
+
+    ui->numpad_4->setIcon(QIcon(":/img/numpad.png"));
+    ui->numpad_4->setIconSize(QSize(40,40));
 
     ui->btn_back->setFlat(true);
     ui->btn_back->setIcon(QIcon(":/img/backBtn.png"));
@@ -80,7 +86,9 @@ void ManualMode::on_btn_test_clicked()
 
     //QString cmd_qt = QString("python3 -c 'import synthesis; synthesis.setPos(1,10)'");
     //QString cmd_qt = QString("python -c 'import ledGeany; ledGeany.led_blink(3)'");
-    QString cmd_qt = QString("python -c 'import ledSynthesis; ledSynthesis.controller(1," + pos1 + "," + hold1 + ",1)'");
+    QString cmd_qt = QString("python3 -c 'import synthesis; synthesis.controller(0," + pos0 + "," + hold0 + ",1,1)'");
+    //python3 -c 'import synthesis; synthesis.controller(0,50,5,1,1)'
+
     const char* cmd = cmd_qt.toLocal8Bit().constData();
     system(cmd);
 }
@@ -95,13 +103,13 @@ void ManualMode::set_combo_values()
     ui->pressure1_combo->addItem(" ");
     for(int i = 0; i < 5; i++)
     {
-        ui->pressure1_combo->addItem(QString::number(i + 1));
+        ui->pressure1_combo->addItem(QString::number((i + 1)*10));
     }
 
     ui->pressure2_combo->addItem(" ");
     for(int i = 0; i < 5; i++)
     {
-        ui->pressure2_combo->addItem(QString::number(i + 1));
+        ui->pressure2_combo->addItem(QString::number((i + 1)*10));
     }
 
     ui->hold1_combo->addItem(" ");
@@ -137,31 +145,49 @@ void ManualMode::on_numpad_2_clicked()
 
 }
 
+void ManualMode::on_numpad_3_clicked()
+{
+    numpad_num = 2;
+    on_numpad_clicked();
+}
+
+void ManualMode::on_numpad_4_clicked()
+{
+    numpad_num = 3;
+    on_numpad_clicked();
+}
+
+
 void ManualMode::set_pressure_numpad(QString msg) {
     ui->pressure1_combo->clear();
     this->ui->pressure1_combo->addItem(msg);
     QMessageBox::information(this, "Operation", msg);
 
-//    for(int i = 0; i < 5; i++)
-//    {
-//        ui->pressure1_combo->addItem(QString::number(i + 1));
-//    }
-
 }
 
 void ManualMode::receiveMessage(const QString &msg) {
-    //QMessageBox::information(this, "Message: ", msg);
-    if (numpad_num) {
-        ui->pressure2_combo->clear();
-        this->ui->pressure2_combo->addItem(msg);
-    } else {
-        ui->pressure1_combo->clear();
-        this->ui->pressure1_combo->addItem(msg);
+    switch(numpad_num) {
+        case 0:
+            ui->pressure1_combo->clear();
+            this->ui->pressure1_combo->addItem(msg);
+            break;
+        case 1:
+            ui->pressure2_combo->clear();
+            this->ui->pressure2_combo->addItem(msg);
+            break;
+        case 2:
+            ui->hold1_combo->clear();
+            this->ui->hold1_combo->addItem(msg);
+            break;
+        case 3:
+            ui->hold2_combo->clear();
+            this->ui->hold2_combo->addItem(msg);
+            break;
+
     }
-//            ui->pressure1_combo->clear();
-//            this->ui->pressure1_combo->addItem(msg);
 
 }
+
 
 
 

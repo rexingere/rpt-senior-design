@@ -123,3 +123,4 @@ def setPos(acNo, dPos):
         GPIO.output(6, GPIO.HIGH)
         mc.ChangeDutyCycle(revSpd)
     mc.ChangeDutyCycle(0)
+

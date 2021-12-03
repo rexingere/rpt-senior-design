@@ -44,9 +44,3 @@ void HelpPage::on_btn_back_clicked()
 }
 
 
-void HelpPage::on_btn_troubleshoot_clicked()
-{
-    troubleshoot = new Troubleshoot(this);
-    troubleshoot->show();
-
-}

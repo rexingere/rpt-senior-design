@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>leadingEdgeLogo.png</file>
+        <file>imgQuestion.png</file>
+        <file>backBtn.png</file>
+        <file>therapy_mode.png</file>
+        <file>test.png</file>
+        <file>stop.png</file>
+        <file>reset.png</file>
+        <file>manual_mode.png</file>
+        <file>begin_therapy.png</file>
+        <file>numpad.png</file>
+        <file>exit_btn.png</file>
+    </qresource>
+</RCC>

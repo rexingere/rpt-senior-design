@@ -18,7 +18,7 @@ TherapyMode::TherapyMode(QWidget *parent) :
     this->showFullScreen();
 
     ui->btn_help->setFlat(true);
-    ui->btn_help->setIcon(QIcon(":/img/question.png"));
+    ui->btn_help->setIcon(QIcon(":/img/imgQuestion.png"));
     ui->btn_help->setIconSize(QSize(55,55));
 
     ui->btn_back->setFlat(true);
@@ -61,7 +61,17 @@ void TherapyMode::on_btn_stop_clicked()
 
 void TherapyMode::on_btn_therapy_clicked()
 {
-    QString cmd_qt = QString("python -c 'import ledSynthesis; ledSynthesis.controller(1," + ui->pressure2->text() + "," + ui->hold2->text() + "," + ui->pulses_combo->currentText() + ")'");
+    QString pos0 = ui->pressure1->text();
+    QString pos1 = ui->pressure2->text();
+
+    QString hold0 = ui->hold1->text();
+    QString hold1 = ui->hold2->text();
+
+    QString pulses = ui->pulses_combo->currentText();
+    QString cycles = ui->cycles_combo->currentText();
+
+    QString cmd_qt = QString("python3 -c 'import synthesis; synthesis.controller(0," + pos0 + "," + hold0 + "," + pulses + "," + cycles + ")'");
+    // python3 -c 'import synthesis; synthesis.controller(0,30,5,3,2)'
     const char* cmd = cmd_qt.toLocal8Bit().constData();
     system(cmd);
 }
